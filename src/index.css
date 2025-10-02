@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .jiffy-text {
+    color: #6017b4;
+  }
+  .jiffy-border {
+    border-color: #6017b4;
+  }
+  .jiffy-bg {
+    background-color: #6017b4;
+  }
+  .jiffy-bg-light {
+    background-color: rgba(96, 23, 180, 0.1);
+  }
+  .jiffy-bg-medium {
+    background-color: rgba(96, 23, 180, 0.3);
+  }
+  .jiffy-bg-dark {
+    background-color: rgba(96, 23, 180, 0.6);
+  }
+  .font-tagesschrift {
+    font-family: "Tagesschrift", serif;
+  }
+  .font-chela {
+    font-family: "Chela One", system-ui;
+  }
+  .font-roboto {
+    font-family: "Roboto", sans-serif;
+  }
+}
+
+/* suspense loader styling */
+@keyframes gentle-unblur {
+  from {
+    filter: blur(4px) brightness(0.95);
+    opacity: 0.9;
+  }
+  to {
+    filter: blur(0) brightness(1);
+    opacity: 1;
+  }
+}
+
+.animate-gentle-unblur {
+  animation-name: gentle-unblur;
+}
+
+/* homepage hero styling */
+.hero-section {
+  height: 80vh;
+  min-height: 500px;
+  object-fit: cover;
+}
+
+@media (min-width: 301px) and (max-width: 424px) {
+  .hero-section {
+    height: 70vh;
+  }
+
+  .hero-section-two {
+    background-size: auto 80% !important;
+    background-position: center 0% !important;
+  }
+
+  .hero-header {
+    margin-top: -2rem;
+  }
+}
+
+@media (min-width: 425px) and (max-width: 639px) {
+  .hero-section {
+    height: 80vh;
+    object-fit: contain;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+  .hero-section {
+    height: 60vh;
+    object-fit: contain;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero-section {
+    height: 40vh;
+    object-fit: cover;
+  }
+}
